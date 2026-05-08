@@ -1,11 +1,11 @@
-// 1. VARIABLES
+
 $color-negro: #000000;
 $color-blanco: #ffffff;
 $color-rojo-gr: #eb0a1e;
 $transition: 0.3s ease;
 $font-principal: Arial, sans-serif;
 
-// 2. RESET
+
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +25,7 @@ img {
   display: block;
 }
 
-// 3. ANIMACIONES
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -35,7 +35,7 @@ main {
     animation: fadeIn 1s ease-out;
 }
 
-// 4. HEADER Y NAVBAR
+
 .navbar {
     .nav-link {
         color: white;
@@ -65,7 +65,7 @@ main {
     }
 }
 
-// 5. HERO Y GALERÍA
+
 .hero-video-container {
     position: relative;
     width: 100%;
@@ -135,7 +135,7 @@ main {
     }
 }
 
-// 6. FOOTER Y STORE
+
 footer, .footer {
     background-color: #000000;
     padding: 20px;

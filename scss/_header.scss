@@ -1,0 +1,7 @@
+.navbar {
+    border-bottom: 2px solid $primary-red;
+    .nav-link {
+        color: $text-white;
+        &:hover { color: $primary-red; }
+    }
+}

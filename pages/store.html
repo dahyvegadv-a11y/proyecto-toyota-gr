@@ -3,123 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/descarga.png" type="image/png">
+    <title>Store | Toyota GR Argentina</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Roboto', sans-serif; }
+        .navbar { border-bottom: 3px solid #eb0a1e; }
+        .store-title { font-family: 'Oswald', sans-serif; font-size: 3rem; text-align: center; margin: 40px 0; }
 
-    <title>Store - Fan Page GR</title>
+        /* TARJETA CORREGIDA PARA TUS IMÁGENES */
+        .gr-card {
+            background-color: #fff; /* Fondo blanco para que coincida con tus fotos */
+            border: 2px solid #eb0a1e; /* Borde rojo para el toque 3D */
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+        }
+
+        .gr-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(235, 10, 30, 0.4);
+        }
+
+        .gr-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        /* Texto en negro porque el fondo ahora es blanco */
+        .product-name { 
+            font-family: 'Oswald', sans-serif; 
+            font-size: 1.3rem; 
+            color: #000; 
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .price { 
+            color: #eb0a1e; 
+            font-size: 1.7rem; 
+            font-weight: 900; 
+            margin-bottom: 15px; 
+        }
+
+        .btn-buy { 
+            background: #000; 
+            color: #fff; 
+            border: none; 
+            padding: 10px; 
+            font-weight: bold; 
+            width: 100%; 
+            transition: 0.3s;
+        }
+
+        .btn-buy:hover { background: #eb0a1e; }
+    </style>
 </head>
 <body>
-
-<!--  HEADER  -->
-<header class="bg-black text-white py-4">
-    <div class="container d-flex justify-content-between align-items-center">
-        <img src="../assets/logo-gr-page.png"
-             alt="Logo Toyota Gazoo Racing Argentina"
-             title="Toyota Gazoo Racing Argentina"
-             class="img-fluid" style="max-height: 100px;">
-
-        <!-- menu navegacion -->
-        <nav>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="quienessomos.html">¿Quiénes somos?</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="store.html">Store</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-
-    </div>
-</header>
- 
-<main class="container my-5">
-
-    <h1 class="mb-5 text-center">Accesorios Toyota Gazoo Racing</h1>
-
-    <!-- productos -->
-    <section class="mb-5">
-        <div class="row g-4 justify-content-center text-center">
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/GRCARROPLEGA_1.jpg" alt="Carro plegable Toyota Gazoo Racing" class="img-fluid img-store">
-                <p class="img-title">Carro plegable GR</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><img src="../assets/LOGO-GR-PAGE.png" width="150"></a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="quienessomos.html">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link active text-danger" href="store.html">STORE</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contacto.html">CONTACTO</a></li>
+                </ul>
             </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/buzo gr.png" alt="Buzo Toyota Gazoo Racing" class="img-fluid img-store">
-                <p class="img-title">Buzo Toyota GR</p>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/remera clasica.jpg" alt="Remera clásica Toyota Gazoo Racing" class="img-fluid img-store img-store-small">
-                <p class="img-title">Remera clásica GR</p>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/buzo xilux.jpg" alt="Buzo Hilux Gazoo Racing" class="img-fluid img-store img-store-small">
-                <p class="img-title">Buzo Hilux GR</p>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/kit herramienta.jpg" alt="Kit de herramientas Toyota Gazoo Racing" class="img-fluid img-store">
-                <p class="img-title">Kit de herramientas GR</p>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/GRLAPICERA01_1.jpg" alt="Lapicera Toyota Gazoo Racing" class="img-fluid img-store">
-                <p class="img-title">Lapicera GR</p>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/remera estampada.jpg" alt="Remera estampada Toyota Gazoo Racing" class="img-fluid img-store">
-                <p class="img-title">Remera estampada GR</p>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/remera gr.jpg" alt="Remera Toyota Gazoo Racing" class="img-fluid img-store">
-                <p class="img-title">Remera GR</p>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/buzo equipo oficial.jpg" alt="Buzo equipo oficial Toyota Gazoo Racing" class="img-fluid img-store">
-                <p class="img-title">Buzo oficial GR</p>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/GRK9FUNDA0_1.png" alt="Funda para auto mascota Toyota Gazoo Racing" class="img-fluid img-store">
-                <p class="img-title">Funda auto mascota GR</p>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/GRMOCHIGOMA1_1.png" alt="Mochila de goma Toyota Gazoo Racing" class="img-fluid img-store">
-                <p class="img-title">Mochila GR</p>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="../assets/chomba.jpg" alt="Chomba WRC hombre importada Toyota Gazoo Racing" class="img-fluid img-store">
-                <p class="img-title">Chomba WRC GR</p>
-            </div>
-
         </div>
-    </section>
+    </nav>
 
-</main>
-<!--  FIN CONTENIDO  -->
-
-<!--  FOOTER  -->
-<footer class="bg-black text-white py-3">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <ul class="list-unstyled d-flex flex-column flex-md-row mb-2 mb-md-0">
-            <li class="me-md-3"><a class="text-white" href="https://www.toyota.com.ar/concesionarios" target="_blank">Concesionarios Oficiales</a></li>
-            <li class="me-md-3"><a class="text-white" href="https://www.toyota.com.ar/" target="_blank">Toyota Argentina - Página Oficial</a></li>
-            <li><a class="text-white" href="termsandconditions.html">Términos y condiciones</a></li>
-        </ul>
-        <p class="mb-0">&copy; 2026 Toyota Gazoo Racing Fan Page</p>
+    <div class="container py-5">
+        <h1 class="store-title">GR MERCHANDISING</h1>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="gr-card">
+                    <img src="../assets/buzo gr.png" alt="Buzo GR">
+                    <div class="product-name">Buzo Hoodie GR</div>
+                    <div class="price">$45.000</div>
+                    <button class="btn-buy">COMPRAR</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="gr-card">
+                    <img src="../assets/remera gr.jpg" alt="Remera GR">
+                    <div class="product-name">Remera Gazoo Racing</div>
+                    <div class="price">$22.500</div>
+                    <button class="btn-buy">COMPRAR</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="gr-card">
+                    <img src="../assets/chomba.jpg" alt="Chomba GR">
+                    <div class="product-name">Chomba Oficial</div>
+                    <div class="price">$28.000</div>
+                    <button class="btn-buy">COMPRAR</button>
+                </div>
+            </div>
+        </div>
     </div>
-</footer>
-<!--  FIN FOOTER  -->
-
-<!-- Bootstrap JavaScript para que funcione como sea -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

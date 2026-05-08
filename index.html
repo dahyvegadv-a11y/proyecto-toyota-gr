@@ -1,107 +1,154 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toyota Gazoo Racing Argentina | Modelos GR</title>
+    <title>Toyota Gazoo Racing | Fan Page Argentina</title>
+    
+    <meta name="description" content="Fan page oficial de Toyota Gazoo Racing Argentina. Conocé nuestros modelos, indumentaria y pasión por el motorsport.">
+    <meta name="keywords" content="Toyota, GR, Gazoo Racing, Argentina, Motorsport, Corolla GR, Yaris GR">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body class="bg-black text-white"> <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-danger py-3">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/logo-gr-page.png" alt="Logo GR Argentina" width="180">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto text-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="menuModelos" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modelos GR</a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="menuModelos">
-              <li><a class="dropdown-item" href="https://www.toyota.com.ar/modelos/gr-yaris" target="_blank" rel="noopener noreferrer">GR Yaris</a></li>
-             <li><a class="dropdown-item" href="https://www.toyota.com.ar/modelos/corolla-gr-sport" target="_blank" rel="noopener noreferrer">GR Corolla</a></li>
-            <li><a class="dropdown-item" href="https://www.toyota.com.ar/modelos/gr86" target="_blank" rel="noopener noreferrer">GR 86</a></li>
-           <li><hr class="dropdown-divider"></li>
-               <li><a class="dropdown-item" href="https://www.toyota.com.ar" target="_blank" rel="noopener noreferrer">Ver todos los modelos</a></li>
-          </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="pages/quienessomos.html">¿Quiénes somos?</a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/store.html">Store</a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --gr-red: #eb0a1e; --gr-black: #000000; --gr-gray: #1a1a1a; }
+        
+        body { background-color: var(--gr-black); color: #fff; font-family: 'Roboto', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, .nav-link { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
 
-<main>
-    <section class="hero-video-container">
-        <video autoplay muted loop playsinline class="video-bg">
-            <source src="assets/gr-video.mp4" type="video/mp4">
-            Tu navegador no soporta videos.
-        </video>
-        <div class="video-overlay d-flex flex-column justify-content-center align-items-center">
-            <h1 class="display-3 fw-bold text-white text-uppercase text-center">Pushing the Limits</h1>
-            <p class="lead text-white text-center">Toyota Gazoo Racing Argentina</p>
-            <a href="#modelos" class="btn btn-danger btn-lg mt-3">Descubrir Modelos</a>
+        /* Navbar estilo flotante */
+        .navbar { background: rgba(0,0,0,0.9); border-bottom: 2px solid var(--gr-red); backdrop-filter: blur(10px); }
+        
+        
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('assets/banner pagina.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 5px solid var(--gr-red);
+        }
+
+        .hero h1 { font-size: 5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 10px; }
+        .hero p { font-size: 1.5rem; color: #ccc; font-weight: 300; }
+
+        
+        .btn-gr {
+            background-color: var(--gr-red);
+            color: white;
+            padding: 15px 40px;
+            font-weight: bold;
+            border-radius: 0;
+            border: 2px solid var(--gr-red);
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-gr:hover { background: transparent; color: var(--gr-red); }
+
+        
+        .model-card {
+            background: var(--gr-gray);
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+        .model-card:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(235, 10, 30, 0.3); }
+        .model-card img { height: 200px; object-fit: cover; border-bottom: 3px solid var(--gr-red); }
+        .model-card h5 { padding: 15px; margin: 0; text-align: center; }
+
+        
+        .motorsport-section {
+            background: linear-gradient(45deg, #000, #111);
+            padding: 80px 0;
+            position: relative;
+        }
+        .motorsport-img { border: 2px solid #333; border-radius: 15px; filter: grayscale(40%); transition: 0.5s; }
+        .motorsport-img:hover { filter: grayscale(0%); border-color: var(--gr-red); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/LOGO-GR-PAGE.png" alt="Logo GR" width="160">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-danger active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/quienessomos.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/store.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="display-1 italic" style="font-style: italic;">PUSHING THE LIMITS</h1>
+            <p class="mb-4">Sentí la adrenalina de Toyota Gazoo Racing Argentina</p>
+            <a href="#modelos" class="btn btn-gr">Descubrí los Modelos</a>
+        </div>
+    </header>
+
+    <section id="modelos" class="container my-5 py-5">
+        <h2 class="text-center mb-5 display-4">Modelos <span class="text-danger">Toyota GR</span></h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="model-card h-100">
+                    <img src="assets/86 gr.png" class="card-img-top" alt="86 GR">
+                    <h5>Toyota GR 86</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="model-card h-100">
+                    <img src="assets/yaris gr.JPG" class="card-img-top" alt="Yaris GR">
+                    <h5>Toyota GR Yaris</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="model-card h-100">
+                    <img src="assets/corolla gr.png" class="card-img-top" alt="Corolla GR">
+                    <h5>Toyota Corolla GR</h5>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="container my-5">
-        <section class="mb-5 text-center">
-            <h1 class="mb-4">Toyota Gazoo Racing - Fan Page</h1>
-            <img src="assets/banner-pagina.png" alt="Toyota Gazoo Racing" class="img-fluid rounded mb-3">
-            <p class="lead">Toyota Gazoo Racing nació del espíritu competitivo de Toyota...</p>
-        </section>
-
-        <section id="modelos" class="mb-5">
-            <h2 class="mb-4 text-center">Modelos Toyota GR</h2>
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <img src="assets/86 gr.png" alt="Toyota 86 GR Sport">
-                    <div class="gallery-caption">Toyota 86 GR Sport</div>
+    <section class="motorsport-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="display-4">MOTORSPORT</h2>
+                    <p class="lead text-secondary">Superamos todos los límites para crear vehículos cada vez mejores, probados en las rutas y pistas más exigentes del mundo.</p>
+                    <hr class="border-danger border-2 w-25">
                 </div>
-                <div class="gallery-item">
-                    <img src="assets/Corolla cross gr.png" alt="Toyota Corolla Cross GR Sport">
-                    <div class="gallery-caption">Toyota Corolla Cross GR Sport</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/Corolla gr.png" alt="Toyota Corolla GR Sport">
-                    <div class="gallery-caption">Toyota Corolla GR Sport</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/rav4 gr.png" alt="Toyota RAV4 GR Sport">
-                    <div class="gallery-caption">Toyota RAV4 GR Sport</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/yaris gr.JPG" alt="Toyota Yaris GR Sport">
-                    <div class="gallery-caption">Toyota Yaris GR Sport</div>
+                <div class="col-md-6">
+                    <img src="assets/motorsport.png" class="img-fluid motorsport-img shadow-lg" alt="Motorsport">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="mb-5 text-center">
-            <h2 class="mb-3">Motorsport</h2>
-            <img src="assets/motorsport.png" alt="Toyota Gazoo Racing Motorsport" class="img-fluid rounded">
-        </section>
-    </div>
-</main>
+    <footer class="bg-black border-top border-secondary py-5">
+        <div class="container text-center">
+            <img src="assets/LOGO-GR-PAGE.png" width="120" class="mb-3 opacity-50">
+            <p class="text-secondary small">© 2026 Toyota Gazoo Racing Fan Page. Este es un proyecto de desarrollo web.</p>
+            <div class="mt-3">
+                <a href="#" class="text-danger text-decoration-none mx-2 small">Términos</a>
+                <a href="#" class="text-danger text-decoration-none mx-2 small">Privacidad</a>
+            </div>
+        </div>
+    </footer>
 
-<footer class="footer py-3 bg-black border-top border-danger">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <ul class="list-unstyled d-flex flex-column flex-md-row mb-2 mb-md-0">
-        <li class="me-md-3"><a class="text-white text-decoration-none" href="https://www.toyota.com.ar/concesionarios" target="_blank">Concesionarios oficiales</a></li>
-        <li class="me-md-3"><a class="text-white text-decoration-none" href="https://www.toyota.com.ar/" target="_blank">Toyota Argentina</a></li>
-        <li><a class="text-white text-decoration-none" href="pages/termsandconditions.html">Términos</a></li>
-      </ul>
-      <p class="mb-0 text-secondary">&copy; 2026 Toyota Gazoo Racing Fan Page</p>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

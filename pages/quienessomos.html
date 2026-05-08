@@ -1,95 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../assets/descarga.png" type="image/png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css">
-  <title>Quiénes somos - Fan Page GR</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Toyota GR Argentina</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            background-color: #000; 
+            color: #fff; 
+            font-family: 'Roboto', sans-serif; 
+        }
 
+        .navbar { border-bottom: 3px solid #eb0a1e; }
+        
+        /* Título con profundidad */
+        .gr-title-3d { 
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-left: 8px solid #eb0a1e; 
+            padding-left: 20px; 
+            text-shadow: 4px 4px 0px #222;
+        }
+
+        /* Contenedor de imagen 3D */
+        .img-box-3d {
+            position: relative;
+            transition: transform 0.3s;
+            box-shadow: 0 15px 35px rgba(235, 10, 30, 0.2);
+        }
+        
+        .img-box-3d:hover {
+            transform: translateY(-10px) rotateX(5deg);
+        }
+
+        /* Tarjetas de Misión/Visión con efecto relieve */
+        .card-val-3d {
+            background: linear-gradient(145deg, #1a1a1a, #000000);
+            border: 1px solid #333;
+            padding: 30px;
+            border-radius: 10px;
+            height: 100%;
+            transition: all 0.4s ease;
+            box-shadow: 10px 10px 20px #000, -5px -5px 15px #111;
+        }
+
+        .card-val-3d:hover {
+            border-color: #eb0a1e;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(235, 10, 30, 0.4);
+        }
+
+        .card-val-3d h3 {
+            color: #eb0a1e;
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
 <body>
 
-<!--  HEADER  -->
-<header class="header py-3">
-  <div class="container d-flex justify-content-between align-items-center">
-      
-     
-      <img 
-        src="../assets/logo-gr-page.png"
-        alt="Logo Toyota Gazoo Racing Argentina"
-        title="Toyota Gazoo Racing Argentina"
-        class="img-fluid header-logo"
-      >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/LOGO-GR-PAGE.png" alt="Logo GR" width="160">
+            </a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link active text-danger" href="quienessomos.html">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="store.html">STORE</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-      <!-- menu navegacion -->
-      <nav>
-        <ul class="nav">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="quienessomos.html">¿Quiénes somos?</a></li>
-          <li class="nav-item"><a class="nav-link" href="store.html">Store</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+    <main class="container my-5 py-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h1 class="gr-title-3d display-4 mb-4">¿QUIÉNES SOMOS?</h1>
+                <p class="lead">TOYOTA GAZOO Racing es la marca que lleva el espíritu de competencia a las calles.</p>
+                <p class="text-secondary">Nuestra filosofía se basa en "Pushing the limits for Better". Creemos que la competición extrema es el camino para desarrollar los mejores autos.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../assets/motorsport.png" alt="Equipo GR" class="img-fluid img-box-3d border border-secondary">
+            </div>
+        </div>
 
-  </div>
-</header>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="card-val-3d">
+                    <h3>MISIÓN</h3>
+                    <p>Superar los límites para desarrollar vehículos de calle cada vez mejores.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-val-3d">
+                    <h3>VISIÓN</h3>
+                    <p>Liderar el motorsport nacional con tecnología de vanguardia.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-val-3d">
+                    <h3>PASIÓN</h3>
+                    <p>Transmitir la emoción de la conducción a cada fanático.</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
-<main class="container my-5">
+    <footer class="bg-black border-top border-secondary py-4 mt-5">
+        <div class="container text-center text-secondary">
+            <p>© 2026 Toyota Gazoo Racing Argentina. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-  <!-- Quiénes Somos -->
-  <section class="mb-5 text-center fade-in">
-    <h1 class="mb-4">Quiénes somos</h1>
-
-    <p class="lead">
-      Toyota Gazoo Racing (GR) es la división deportiva de <a href="https://www.toyota-global.com" target="_blank" class="text-danger">Toyota Motor Corporation</a>, creada para llevar la experiencia de la pista a los autos de calle.
-      Su filosofía <strong>“Roads build people, people build cars”</strong> refleja la creencia de que la competición no solo desarrolla vehículos de alto rendimiento, sino también a las personas que los construyen.
-    </p>
-
-    <p>
-      Desde su fundación en 2007, Toyota Gazoo Racing ha participado en algunas de las competencias más exigentes del mundo, incluyendo:
-    </p>
-    <ul class="text-start" style="max-width: 600px; margin: auto;">
-      <li>Campeonato Mundial de Rally (WRC)</li>
-      <li>24 Horas de Le Mans</li>
-      <li>Mundial de Resistencia (WEC)</li>
-      <li>Super Taikyu Series en Japón</li>
-    </ul>
-
-    <p class="mt-3">
-      Esta experiencia en motorsport se traduce directamente en innovación y tecnología aplicada a los vehículos GR que podés ver en la línea de autos de calle como el 
-      <a href="https://www.toyota.com.ar/gr86" target="_blank" class="text-danger">GR86</a> o el 
-      <a href="https://www.toyota.com.ar/corolla" target="_blank" class="text-danger">Corolla GR Sport</a>.
-      Cada modelo combina rendimiento, confiabilidad y diseño deportivo, llevando la pasión de las pistas a tu conducción diaria.
-    </p>
-
-    <p>
-      Además de los autos, Toyota Gazoo Racing promueve actividades de experiencia para los fanáticos, entrenamiento de pilotos y desarrollo de tecnología de movilidad sustentable.  
-      Para más información, podés visitar la página oficial de <a href="https://www.toyota.com.ar/gazoo-racing" target="_blank" class="text-danger">Toyota Gazoo Racing Argentina</a>.
-    </p>
-
-    <img src="../assets/banner pagina.png" alt="Equipo Toyota Gazoo Racing" class="img-fluid rounded mt-4">
-
-  </section>
-
-</main>
-<!--  FIN CONTENIDO PRINCIPAL  -->
-
-<!--  FOOTER  -->
-<footer class="footer py-3">
-  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-    <ul class="list-unstyled d-flex flex-column flex-md-row mb-2 mb-md-0">
-      <li class="me-md-3"><a href="https://www.toyota.com.ar/concesionarios" target="_blank">Concesionarios oficiales</a></li>
-      <li class="me-md-3"><a href="https://www.toyota.com.ar/" target="_blank">Toyota Argentina - Página oficial</a></li>
-      <li><a href="termsandconditions.html">Términos y condiciones</a></li>
-    </ul>
-    <p class="mb-0">&copy; 2026 Toyota Gazoo Racing Fan Page</p>
-  </div>
-</footer>
-<!--  FIN FOOTER  -->
-
-<!-- Bootstrap JS para que funcione como sea -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
