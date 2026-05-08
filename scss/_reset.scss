@@ -1,18 +1,18 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif; // O la tipografía que prefieras
-    overflow-x: hidden;
+  background-color: $bg-black; // Usamos la variable
+  color: $text-white; // Usamos la variable
+  line-height: 1.6;
+  font-family: $font-main;
 }
 
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
